@@ -1,0 +1,102 @@
+<mat-card>
+    <form>
+<div class="row">
+<div class="col-md-6">
+    <div class="form-sec">
+      
+          <div class="form-group">
+            <label>Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+          </div>
+          <div class="form-group">
+            
+           <label>Upload Photo:</label>
+           <span> <input  type="file"  id="photo"  name="photo" class="photo-upload"></span>
+           </div>
+           
+        
+          <div class="form-group">
+            <label>Unit of Measurment:</label>
+            <select name="measurement" class="ddList">
+                <option disabled>(please select Unit of Measurment)</option>
+                <option class="lt" value="piece">Piece</option>
+                <option class="lt" value="liter">Liter</option>
+                <option class="lt" value="AK">Measurement</option>
+                </select>
+             </div>
+
+          <div class="form-group">
+            <label>Weight:</label>
+            <input type="text" class="form-control" id="weight" placeholder="Enter Weight" name="weight">
+          </div>
+           
+         <div class="form-group">
+            <label>Type of Material:</label>
+            <select name="type" class="m-type">
+                <option disabled>(please select Type of Material)</option>
+                <option class="lt" value="wood">Wood</option>
+                <option class="lt" value="item">Item</option>
+                </select>
+             </div>
+
+             
+
+               <div class="form-group">
+                <label>Comment:</label>
+                <textarea rows="4" cols="50" name="comment" class="comment">
+                  Enter text here...</textarea>
+                    </div>
+
+
+        </div>
+</div>
+
+<div class="col-md-6">
+    <div class="form-sec-0">
+       
+      <div class="form-group">
+        <label>Material:</label><br>
+        <input type="radio" name="gender" value="scrap">Scrap 
+        <input type="radio" name="gender" value="returnable"> Returnable
+         </div> 
+
+          <div class="form-group">
+            <label>ETA (Production Time for vendor) :</label>
+            <mat-form-field >
+              <input matInput [matDatepicker]="picker" placeholder="Choose a date" >
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            
+             </div>
+         
+          
+          <div class="form-group">
+            <label>Moving Average Cost:</label>
+            <input type="text" class="form-control" id="ma-cost" placeholder="Enter Moving Average Cost" name="ma-cost">
+          </div>
+          <div class="form-group">
+            <label>Target Cost (Buyer)</label>
+            <input type="text" class="form-control" id="t-cost" placeholder="Enter Target Cost" name="t-cost">
+          </div>
+           
+          <div class="form-group">
+            <label> Created Time:</label>
+            <input type="time" name="cr_time" class="time">
+           </div>
+
+          <div class="form-group">
+            <label>Last Updated Time:</label>
+            <input type="time" name="lp_time" class="time">
+            </div>
+          
+          
+          <button type="submit" class="btn btn-primary" style="float:right">Submit</button>
+ 
+        
+        </div> 
+</div>
+
+</div>
+</form>
+</mat-card>
