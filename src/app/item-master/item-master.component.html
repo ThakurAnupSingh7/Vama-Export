@@ -15,37 +15,70 @@
            </div>
            
         
-          <div class="form-group">
+          
+           <div class="form-group">
             <label>Unit of Measurment:</label>
-            <select name="measurement" class="ddList">
-                <option disabled>(please select Unit of Measurment)</option>
-                <option class="lt" value="piece">Piece</option>
-                <option class="lt" value="liter">Liter</option>
-                <option class="lt" value="AK">Measurement</option>
-                </select>
-             </div>
+            <mat-form-field>
+            <mat-label>Select Unit of Measurment</mat-label>
+  <mat-select [(value)]="selected" class="ddList" >
+    <mat-option disabled >(please select Unit of Measurment)</mat-option>
+    <mat-option value="piece" #piece>Piece</mat-option>
+    <mat-option  value="liter" #liter>Liter</mat-option>
+    <mat-option value="measurement" #measurement>Measurement</mat-option>
+  </mat-select>
+</mat-form-field>
+                </div>
+
+             
+                <div class="form-group" *ngIf=piece.selected>
+           <label>No Of Piece:</label>
+          <input type="text" class="form-control" id="n_piece" placeholder="Enter No Of Piece" name="n_piece">
+         </div>
+
+
+         <div class="form-group" *ngIf=liter.selected>
+          <label>Liter:</label>
+         <input type="text" class="form-control" id="n_liter" placeholder="Enter Liter" name="n_liter">
+        </div> 
+        
+        <div *ngIf=measurement.selected>
+        <div class="form-group">
+          <label>Length Of Material:</label>
+         <input type="text" class="form-control" id="length" placeholder="Enter Length" name="length">
+        </div> 
+        
+        <div class="form-group">
+          <label>Width Of Material:</label>
+         <input type="text" class="form-control" id="width" placeholder="Enter Width" name="width">
+        </div> 
+        
+        <div class="form-group">
+          <label>Height Of Material:</label>
+         <input type="text" class="form-control" id="height" placeholder="Enter Height" name="height">
+        </div> 
+
+      </div>
+
+
 
           <div class="form-group">
             <label>Weight:</label>
             <input type="text" class="form-control" id="weight" placeholder="Enter Weight" name="weight">
           </div>
            
-         <div class="form-group">
-            <label>Type of Material:</label>
-            <select name="type" class="m-type">
-                <option disabled>(please select Type of Material)</option>
-                <option class="lt" value="wood">Wood</option>
-                <option class="lt" value="item">Item</option>
-                </select>
-             </div>
-
+        
+             <div class="form-group">
+              <label>Type of Material:</label>
+              <mat-form-field>
+              <mat-label>Select Type of Material</mat-label>
+    <mat-select name="type" class="m-type" >
+      <mat-option disabled >(please select Type of Material)</mat-option>
+      <mat-option value="wood">Wood</mat-option>
+      <mat-option value="item">Item</mat-option>
+    </mat-select>
+  </mat-form-field>
+                  </div>
              
-
-               <div class="form-group">
-                <label>Comment:</label>
-                <textarea rows="4" cols="50" name="comment" class="comment">
-                  Enter text here...</textarea>
-                    </div>
 
 
         </div>
@@ -56,8 +89,10 @@
        
       <div class="form-group">
         <label>Material:</label><br>
-        <input type="radio" name="gender" value="scrap">Scrap 
-        <input type="radio" name="gender" value="returnable"> Returnable
+         <mat-radio-group>
+          <mat-radio-button class="example-margin" value="scrap">Scrap </mat-radio-button>
+          <mat-radio-button class="example-margin"  value="returnable"> Returnable</mat-radio-button>
+        </mat-radio-group> 
          </div> 
 
           <div class="form-group">
@@ -90,6 +125,13 @@
             <input type="time" name="lp_time" class="time">
             </div>
           
+
+            
+            <div class="form-group">
+              <label>Comment:</label>
+              <textarea rows="4" cols="50" name="comment" class="comment">
+                Enter text here...</textarea>
+                  </div>
           
           <button type="submit" class="btn btn-primary" style="float:right">Submit</button>
  

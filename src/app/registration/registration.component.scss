@@ -1,0 +1,59 @@
+main {
+    padding: 40px 15px;
+     background: linear-gradient(4deg, #5f13869e 17%, #0e73e0a8 69%), url(http://eskipaper.com/images/bubbles-wallpaper-10.jpg);
+	 background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.form-group label{
+	font-weight:500;
+}
+.main-form {
+    margin: 0 auto;
+}
+.card-header {
+    background-color: transparent;
+    text-align: center;
+}
+
+.btn-lg.col-md-6 {
+	margin: 10px auto!important;
+    display: block;
+}
+.form-content {
+	margin-bottom:0px;
+}
+
+.form-content .form-control {
+    border-radius: 0;
+
+}
+
+.container.form-content .btn{
+    min-width: 140px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.container.form-content .btn{
+    background-image: linear-gradient(to right, #dc3545, #FCEE21, #dc3545, #dc3545);
+    box-shadow: 0 4px 15px 0 rgba(2, 2, 2, 0.16);
+    box-shadow: 0 4px 15px 0 rgba(2, 2, 2, 0.16);
+}
+.container.form-content .btn:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+

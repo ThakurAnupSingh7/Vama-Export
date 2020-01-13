@@ -9,9 +9,11 @@
     padding-bottom: 52px;
 }
 
+
+
 label {
     color: #737070;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
 }
 
@@ -19,38 +21,47 @@ label {
     padding: 8px 10px;
     border-radius: 10px;
     background-color: beige;
-    border: 1px solid #979595;
+    border: 1px solid #ced4da;
     margin-left: 10px;
 }
 
-.ddList{
-    padding: 12px 6px;
-    border-radius: 10px;
-    outline: none;
-    margin-left: 10px;
+mat-form-field{
+    width: 100%;
 }
 
-option:focus {
-    outline: none;
-}
+// .ddList{
+//     padding: 12px 6px;
+//     border-radius: 10px;
+//     outline: none;
+//     margin-left: 10px;
+//     border: 1px solid #ced4da;
+// }
+
+// option:focus {
+//     outline: none;
+// }
 
 
-.m-type{
-    padding: 12px 32px;
-    border-radius: 10px;
-    outline: none;
-    margin-left: 10px;
-}
+// .m-type{
+//     padding: 12px 32px;
+//     border-radius: 10px;
+//     outline: none;
+//     margin-left: 10px;
+//     border: 1px solid #ced4da;
+// }
 
 .comment{
     width: 100%;
     border-radius: 10px;
     outline: none;
+    border: 1px solid #ced4da;
 
 }
 
 
-
+.example-margin {
+    margin: 0 10px;
+  }
 
 
 .time{

@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { ItemMasterComponent } from './item-master/item-master.component';
-import { AssemblyComponent } from './assembly/assembly.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { FinishingComponent } from './finishing/finishing.component';
 import { CostingComponent } from './costing/costing.component';
@@ -28,7 +27,6 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatCardModule} from '@angular/material/card';
-import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -56,6 +54,15 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ProductSimulationComponent } from './product-simulation/product-simulation.component';
+import { PurchagingOrderComponent } from './purchaging-order/purchaging-order.component';
+import { SellingOrderComponent } from './selling-order/selling-order.component';
+import { HeaderSecondComponent } from './header-second/header-second.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
+
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,21 +70,25 @@ import {MatTreeModule} from '@angular/material/tree';
     SideNavComponent,
     FooterComponent,
     ItemMasterComponent,
-    AssemblyComponent,
     ProductDetailsComponent,
     FinishingComponent,
-    CostingComponent
+    CostingComponent,
+    ProductSimulationComponent,
+    PurchagingOrderComponent,
+    SellingOrderComponent,
+    HeaderSecondComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatFormFieldModule,
-
-
-
-    A11yModule,
+ A11yModule,
     CdkStepperModule,
     CdkTableModule,
     CdkTreeModule,

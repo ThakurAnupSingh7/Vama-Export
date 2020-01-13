@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
 body {
-    text-align: center;
-    background-image: url(/assets/img/head3.jpg);
-    background-position: 0% 36%;
-    background-size: 100% 198%;
-    color: rgb(255, 173, 0);
-    font-family: "Roboto";
-    font-weight: bolder;
-    font-size: 34px;
-    padding-top: 38px;
-    height: 120px;
-  overflow:hidden;
+  text-align: center;
+   background-image: url(/assets/img/head3.jpg);
+  background-position: 0% 36%;
+  background-size: 100% 198%;
+  color: #ffad00;
+  font-family: "Roboto";
+  font-weight: bolder;
+  font-size: 32px;
+  padding-top: 15px;
+  height: 80px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   perspective: 1000;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
 
 @media screen and (max-width:420px){

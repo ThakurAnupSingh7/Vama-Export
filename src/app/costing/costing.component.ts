@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CostingComponent implements OnInit {
 
+  
+
   constructor() { }
 
   ngOnInit() {
+
+
   }
+
 
 }
