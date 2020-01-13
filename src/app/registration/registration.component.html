@@ -1,0 +1,58 @@
+<main>
+    <div class="container form-content">		
+        
+        
+        <!-- form card login -->
+        <div class="card col-md-8 main-form" id="registration-form">
+            <div class="card-header">
+                <h3 class="mt-2"> Registration Form  </h3>
+            </div>
+            <div class="card-body">
+                <form class="form row" role="form" autocomplete="off" id="formregistration" novalidate="" method="POST">
+                    <div class="form-group col-md-6">
+                        <label for="uname1">Name</label>
+                        <input type="text" class="form-control" name="uname1" id="uname1" required="">
+    
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email Id </label>
+                        <input type="email" class="form-control" name="email" id="email" required="">
+                    </div>
+                    
+                    <div class="form-group col-md-6">
+                        <label for="no"> Mobile No. </label>
+                        <input type="text" class="form-control" id="mobile" maxlength="10" name="mobile" required="">
+                    </div>
+    
+                    <div class="form-group col-md-6">
+                      <label>Roll </label>
+                      <select id="roll" class="form-control">
+                        <option> Choose...</option>
+                          <option> Admin</option>
+                          <option>Production Manager</option>
+                          <option>Logistic</option>
+                          <option> Finance</option>
+                          <option> Quality</option>
+                          <option>Merchant</option>
+                          <option>Logistic</option>
+                          <option>Packing Manager</option>
+                      </select>
+                    </div>
+                   
+                    <div class="form-group col-md-6">
+                        <label for="password">Password </label>
+                        <input type="password" class="form-control" name="pass" id="pass" required="">
+    
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="Cpassword">Comfirm Password </label>
+                        <input type="password" class="form-control" name="cpass" id="cpass" required="">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg col-md-6 " id="btnLogin"> Submit </button>
+                </form>
+            </div>
+        </div>
+            <!--/Container-->
+    </div>
+    </main>
+        

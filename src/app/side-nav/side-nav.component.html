@@ -1,10 +1,15 @@
 
-<div class="container">
-  <ul class="list-group">
-      <li class="list-group-item active" routerLink="/">Item Master  <i class='fas fa-clipboard-list'></i></li>
-      <li class="list-group-item"routerLink="assembly">Assembly  <i class='	fas fa-tools'></i></li>
+<mat-card class="container">
+
+  <button mat-raised-button color="primary" routerLink="/"> Login</button>
+  <button mat-raised-button color="accent" routerLink="register"> Register</button>
+  
+    <ul class="list-group">
+   <li class="list-group-item" routerLink="item-master">Item Master  <i class='fas fa-clipboard-list'></i></li>
+      <li class="list-group-item" routerLink="purchaging-order">Purchasing Order <i class='fas fa-briefcase'></i></li>
+       <li class="list-group-item" routerLink="product-simulation">Product Simulation  <i class='	fas fa-tools'></i></li>
       <li class="list-group-item" routerLink="product-details">Product Details  <i class='fas fa-chalkboard-teacher'></i></li>
-      <li class="list-group-item" routerLink="finishing">Finishing  <i class='fas fa-paint-roller'></i></li>
+      <li class="list-group-item" routerLink="selling-order">Selling Order<i class='fas fa-dolly-flatbed'></i></li>
       <li class="list-group-item" routerLink="costing">Costing  <i class='fas fa-boxes'></i></li>
     </ul>
-  </div>
+  </mat-card>
