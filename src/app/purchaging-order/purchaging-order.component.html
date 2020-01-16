@@ -1,30 +1,46 @@
 
-<mat-card>
-    <form>
+ <mat-card>
+
+    <form [formGroup]=" PurchasingForm" (ngSubmit)="onSubmit()">
 <div class="row">
 <div class="col-md-6">
     <div class="form-sec">
       
           <div class="form-group">
             <label>Purchasing Order Id:</label>
-            <input type="text" class="form-control" id="po_id" placeholder="Enter Purchasing Order Id" name="po_id">
+            <input type="text" class="form-control" formControlName="po_id" required>
+            <div *ngIf="po_id.invalid && (po_id.dirty || po_id.touched)" class="alert alert-danger">
+            <div *ngIf="po_id.errors.required" class="form-error"> Purchasing Order Id is required. </div>
           </div>
 
-
-          <div class="form-group">
+          </div>
+          
+           <div class="form-group">
             <label>Item Id:</label>
-            <input type="text" class="form-control" id="i_id" placeholder="Enter Item Id" name="i_id">
+            <input type="text" class="form-control" formControlName="i_id" required>
+            <div *ngIf="i_id.invalid && (i_id.dirty || i_id.touched)" class="alert alert-danger">
+              <div *ngIf="i_id.errors.required" class="form-error"> Item Id is required. </div>
+            </div>
+
           </div>
 
           <div class="form-group">
             <label>Item Name:</label>
-            <input type="text" class="form-control" id="i_name" placeholder="Enter Item Name" name="i_name">
+            <input type="text" class="form-control" formControlName="i_name"  required>
+            <div *ngIf="i_name.invalid && (i_name.dirty || i_name.touched)" class="alert alert-danger">
+              <div *ngIf="i_name.errors.required" class="form-error">Item Name is required. </div>
+            </div>
+
           </div>
 
           <div class="form-group">
             <label>Quantity:</label>
-            <input type="text" class="form-control" id="quantity" placeholder="Enter Quantity" name="quantity">
-          </div>
+            <input type="text" class="form-control" formControlName="quantity"  required>
+            <div *ngIf="quantity.invalid && (quantity.dirty || quantity.touched)" class="alert alert-danger">
+              <div *ngIf="quantity.errors.required" class="form-error"> Quantity is required. </div>
+            </div>
+
+          </div> 
 
         </div>
 </div>
@@ -33,21 +49,30 @@
     <div class="form-sec-0">
        <div class="form-group">
             <label>Purchaser Name:</label>
-            <input type="text" class="form-control" id="p_name" placeholder="Enter Purchaser Name" name="p_name">
-          </div>
+            <input type="text" class="form-control" formControlName="p_name" required> 
+            <div *ngIf="p_name.invalid && (p_name.dirty || p_name.touched)" class="alert alert-danger">
+              <div *ngIf="p_name.errors.required" class="form-error">Purchaser Name is required. </div>
+            </div>
+            
+            </div>
  
-             
-  <div class="form-group">
+         
+   <div class="form-group">
                 <label>Comment:</label>
-                <textarea rows="4" cols="50" name="comment" class="comment">
-                  Enter text here...</textarea>
-                    </div>
+                <textarea rows="4" cols="50" formControlName="comment" class="comment" required></textarea>
+                <div *ngIf="comment.invalid && (comment.dirty || comment.touched)" class="alert alert-danger">
+                  <div *ngIf="comment.errors.required" class="form-error"> Comment is required. </div>
+                </div>
 
-    <button type="submit" class="btn btn-primary" style="float:right">Submit</button>
+                    </div> 
 
+   <button type="submit" class="btn btn-primary" [disabled]="!PurchasingForm.valid" style="float:right">Submit</button>
+
+   
         </div>
 </div>
 
 </div>
+ 
 </form>
 </mat-card>
