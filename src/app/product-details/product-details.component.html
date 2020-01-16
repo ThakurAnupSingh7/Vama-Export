@@ -7,12 +7,12 @@
       
           <div class="form-group">
             <label>Product Id:</label>
-            <input type="text" class="form-control" id="pid" placeholder="Enter Product Id" name="pid">
+            <input type="text" class="form-control" name="pid">
           </div>
 
           <div class="form-group">
             <label>Product Name:</label>
-            <input type="text" class="form-control" id="pname" placeholder="Enter Product Name" name="pname">
+            <input type="text" class="form-control" name="pname">
           </div>
 
            
@@ -33,29 +33,29 @@
              
                 <div class="form-group" *ngIf=piece.selected>
            <label>No Of Piece:</label>
-          <input type="text" class="form-control" id="n_piece" placeholder="Enter No Of Piece" name="n_piece">
+          <input type="text" class="form-control" name="n_piece">
          </div>
 
 
          <div class="form-group" *ngIf=liter.selected>
           <label>Liter:</label>
-         <input type="text" class="form-control" id="n_liter" placeholder="Enter Liter" name="n_liter">
+         <input type="text" class="form-control" name="n_liter">
         </div> 
         
         <div *ngIf=measurement.selected>
         <div class="form-group">
           <label>Length Of Material:</label>
-         <input type="text" class="form-control" id="length" placeholder="Enter Length" name="length">
+         <input type="text" class="form-control" name="length">
         </div> 
         
         <div class="form-group">
           <label>Width Of Material:</label>
-         <input type="text" class="form-control" id="width" placeholder="Enter Width" name="width">
+         <input type="text" class="form-control" name="width">
         </div> 
         
         <div class="form-group">
           <label>Height Of Material:</label>
-         <input type="text" class="form-control" id="height" placeholder="Enter Height" name="height">
+         <input type="text" class="form-control" name="height">
         </div> 
 
       </div>
@@ -123,7 +123,7 @@
                   
                   <div class="form-group">
                     <label>Finishing Cost:</label>
-                    <input type="text" class="form-control" id="f_cost" placeholder="Enter Finishing Cost" name="f_cost">
+                    <input type="text" class="form-control" name="f_cost">
                   </div>
 
       </div>
@@ -132,7 +132,7 @@
       <div class="fitting" *ngIf=fitting.checked>
         <div class="form-group">
           <label>Fitting Time:</label>
-          <input type="text" class="form-control" id="fit_time" placeholder="Enter Fitting Time" name="fit_time">
+          <input type="text" class="form-control" name="fit_time">
         </div>
  </div>
       
@@ -141,7 +141,7 @@
       <div class="polishing" *ngIf=polishing.checked>
         <div class="form-group">
           <label>Polishing Time:</label>
-          <input type="text" class="form-control" id="po_time" placeholder="Enter Polishing Time" name="po_time">
+          <input type="text" class="form-control" name="po_time">
         </div>
 
       </div>
@@ -151,8 +151,7 @@
 
              <div class="form-group">
               <label>Comment:</label>
-              <textarea rows="4" cols="50" name="comment" class="comment">
-                Enter text here...</textarea>
+              <textarea rows="4" cols="50" name="comment" class="comment"></textarea>
                   </div>
 
 

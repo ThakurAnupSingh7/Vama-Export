@@ -9,6 +9,7 @@ import { PurchagingOrderComponent } from './purchaging-order/purchaging-order.co
 import { SellingOrderComponent } from './selling-order/selling-order.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { MoreInfoComponent } from './more-info/more-info.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'selling-order', component:SellingOrderComponent},
   {path:'login', component:LoginComponent},
  {path:'register', component:RegistrationComponent},
+ {path:'more-info', component:MoreInfoComponent},
 
 ];
 

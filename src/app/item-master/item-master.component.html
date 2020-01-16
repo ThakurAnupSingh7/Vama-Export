@@ -6,12 +6,12 @@
       
           <div class="form-group">
             <label>Name:</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+            <input type="text" class="form-control"  name="name">
           </div>
           <div class="form-group">
             
            <label>Upload Photo:</label>
-           <span> <input  type="file"  id="photo"  name="photo" class="photo-upload"></span>
+           <span> <input  type="file"  name="photo" class="photo-upload"></span>
            </div>
            
         
@@ -32,29 +32,29 @@
              
                 <div class="form-group" *ngIf=piece.selected>
            <label>No Of Piece:</label>
-          <input type="text" class="form-control" id="n_piece" placeholder="Enter No Of Piece" name="n_piece">
+          <input type="text" class="form-control" name="n_piece">
          </div>
 
 
          <div class="form-group" *ngIf=liter.selected>
           <label>Liter:</label>
-         <input type="text" class="form-control" id="n_liter" placeholder="Enter Liter" name="n_liter">
+         <input type="text" class="form-control" name="n_liter">
         </div> 
         
         <div *ngIf=measurement.selected>
         <div class="form-group">
           <label>Length Of Material:</label>
-         <input type="text" class="form-control" id="length" placeholder="Enter Length" name="length">
+         <input type="text" class="form-control"  name="length">
         </div> 
         
         <div class="form-group">
           <label>Width Of Material:</label>
-         <input type="text" class="form-control" id="width" placeholder="Enter Width" name="width">
+         <input type="text" class="form-control" name="width">
         </div> 
         
         <div class="form-group">
           <label>Height Of Material:</label>
-         <input type="text" class="form-control" id="height" placeholder="Enter Height" name="height">
+         <input type="text" class="form-control" name="height">
         </div> 
 
       </div>
@@ -63,7 +63,7 @@
 
           <div class="form-group">
             <label>Weight:</label>
-            <input type="text" class="form-control" id="weight" placeholder="Enter Weight" name="weight">
+            <input type="text" class="form-control" name="weight">
           </div>
            
         
@@ -108,11 +108,11 @@
           
           <div class="form-group">
             <label>Moving Average Cost:</label>
-            <input type="text" class="form-control" id="ma-cost" placeholder="Enter Moving Average Cost" name="ma-cost">
+            <input type="text" class="form-control" name="ma-cost">
           </div>
           <div class="form-group">
             <label>Target Cost (Buyer)</label>
-            <input type="text" class="form-control" id="t-cost" placeholder="Enter Target Cost" name="t-cost">
+            <input type="text" class="form-control" name="t-cost">
           </div>
            
           <div class="form-group">
@@ -129,8 +129,7 @@
             
             <div class="form-group">
               <label>Comment:</label>
-              <textarea rows="4" cols="50" name="comment" class="comment">
-                Enter text here...</textarea>
+              <textarea rows="4" cols="50" name="comment" class="comment"></textarea>
                   </div>
           
           <button type="submit" class="btn btn-primary" style="float:right">Submit</button>

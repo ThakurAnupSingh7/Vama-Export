@@ -63,6 +63,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MoreInfoComponent } from './more-info/more-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,7 +79,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     SellingOrderComponent,
     HeaderSecondComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    MoreInfoComponent
   ],
   imports: [
     BrowserModule,
