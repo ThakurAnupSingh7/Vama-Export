@@ -61,9 +61,16 @@ import { SellingOrderComponent } from './selling-order/selling-order.component';
 import { HeaderSecondComponent } from './header-second/header-second.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MoreInfoComponent } from './more-info/more-info.component';
+import { SignupSigninService } from './Service/signup-signin.service';
+import { ProductDetailsService } from './Service/product-details.service';
+import { ItemMasterService } from './Service/item-master.service';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,6 +91,7 @@ import { MoreInfoComponent } from './more-info/more-info.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
@@ -133,7 +141,7 @@ import { MoreInfoComponent } from './more-info/more-info.component';
     PortalModule,
     ScrollingModule,
   ],
-  providers: [],
+  providers: [SignupSigninService,ProductDetailsService, ItemMasterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
