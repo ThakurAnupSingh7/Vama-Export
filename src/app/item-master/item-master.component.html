@@ -1,12 +1,12 @@
 <mat-card>
-    <form>
+    <form  [formGroup]="form" (ngSubmit)="onSubmit()">
 <div class="row">
 <div class="col-md-6">
     <div class="form-sec">
       
           <div class="form-group">
             <label>Name:</label>
-            <input type="text" class="form-control"  name="name">
+            <input type="text" class="form-control" formControlName="itemName"  name="itemName">
           </div>
           <div class="form-group">
             
@@ -20,7 +20,7 @@
             <label>Unit of Measurment:</label>
             <mat-form-field>
             <mat-label>Select Unit of Measurment</mat-label>
-  <mat-select [(value)]="selected" class="ddList" >
+  <mat-select [(value)]="selected" class="ddList" formControlName="unitMeasurement">
     <mat-option disabled >(please select Unit of Measurment)</mat-option>
     <mat-option value="piece" #piece>Piece</mat-option>
     <mat-option  value="liter" #liter>Liter</mat-option>
@@ -32,38 +32,46 @@
              
                 <div class="form-group" *ngIf=piece.selected>
            <label>No Of Piece:</label>
-          <input type="text" class="form-control" name="n_piece">
+          <input type="text" class="form-control" name="itemNoOfPiece" formControlName="itemNoOfPiece">
          </div>
 
 
          <div class="form-group" *ngIf=liter.selected>
           <label>Liter:</label>
-         <input type="text" class="form-control" name="n_liter">
+         <input type="text" class="form-control" name="liquidMeasurement" formControlName="liquidMeasurement">
         </div> 
         
         <div *ngIf=measurement.selected>
         <div class="form-group">
           <label>Length Of Material:</label>
-         <input type="text" class="form-control"  name="length">
+         <input type="text" class="form-control"  name="lengthMeasurement" formControlName="lengthMeasurement">
         </div> 
         
         <div class="form-group">
           <label>Width Of Material:</label>
-         <input type="text" class="form-control" name="width">
+         <input type="text" class="form-control" name="widthMeasurement" formControlName="widthMeasurement">
         </div> 
         
         <div class="form-group">
           <label>Height Of Material:</label>
-         <input type="text" class="form-control" name="height">
+         <input type="text" class="form-control" name="hightMeasurement" formControlName="hightMeasurement">
         </div> 
 
-      </div>
+      </div> 
 
 
 
           <div class="form-group">
             <label>Weight:</label>
-            <input type="text" class="form-control" name="weight">
+            <input type="text" class="form-control" name="item_Size" formControlName="item_Size">
+          </div>
+           
+
+          
+
+          <div class="form-group">
+            <label>Item Color:</label>
+            <input type="text" class="form-control" name="item_Colour" formControlName="item_Colour">
           </div>
            
         
@@ -71,7 +79,7 @@
               <label>Type of Material:</label>
               <mat-form-field>
               <mat-label>Select Type of Material</mat-label>
-    <mat-select name="type" class="m-type" >
+    <mat-select  class="m-type" formControlName="itemType" >
       <mat-option disabled >(please select Type of Material)</mat-option>
       <mat-option value="wood">Wood</mat-option>
       <mat-option value="item">Item</mat-option>
@@ -89,16 +97,16 @@
        
       <div class="form-group">
         <label>Material:</label><br>
-         <mat-radio-group>
-          <mat-radio-button class="example-margin" value="scrap">Scrap </mat-radio-button>
-          <mat-radio-button class="example-margin"  value="returnable"> Returnable</mat-radio-button>
+         <mat-radio-group formControlName="itemMaterial">
+          <mat-radio-button class="example-margin" value="Scrap">Scrap </mat-radio-button>
+          <mat-radio-button class="example-margin" value="Returnable"> Returnable</mat-radio-button>
         </mat-radio-group> 
          </div> 
 
           <div class="form-group">
             <label>ETA (Production Time for vendor) :</label>
             <mat-form-field >
-              <input matInput [matDatepicker]="picker" placeholder="Choose a date" >
+              <input matInput [matDatepicker]="picker" formControlName="vendor_Estimate_time" placeholder="Choose a date" >
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -108,28 +116,34 @@
           
           <div class="form-group">
             <label>Moving Average Cost:</label>
-            <input type="text" class="form-control" name="ma-cost">
+            <input type="text" class="form-control" formControlName="itemAvg_Cost" name="itemAvg_Cost">
           </div>
+
           <div class="form-group">
             <label>Target Cost (Buyer)</label>
-            <input type="text" class="form-control" name="t-cost">
+            <input type="text" class="form-control" name="t-cost" formControlName="itemTarget_Cost">
           </div>
            
           <div class="form-group">
             <label> Created Time:</label>
-            <input type="time" name="cr_time" class="time">
+            <input type="time" name="cr_time" class="time" formControlName="itemCreatedTime">
            </div>
 
           <div class="form-group">
             <label>Last Updated Time:</label>
-            <input type="time" name="lp_time" class="time">
+            <input type="time" name="lp_time" class="time" formControlName="itemLastUpdate">
             </div>
           
 
-            
+            <div class="form-group">
+              <label>Remarks:</label>
+              <textarea rows="3" cols="50" name="itemRemarks" class="comment" formControlName="itemRemarks"></textarea>
+                  </div>
+
+
             <div class="form-group">
               <label>Comment:</label>
-              <textarea rows="4" cols="50" name="comment" class="comment"></textarea>
+              <textarea rows="4" cols="50" name="itemComments" class="comment" formControlName="itemComments"></textarea>
                   </div>
           
           <button type="submit" class="btn btn-primary" style="float:right">Submit</button>
@@ -141,3 +155,33 @@
 </div>
 </form>
 </mat-card>
+
+
+
+
+<!-- 
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="itemPhotos" placeholder="pimg" />
+  <input type="text" formControlName="itemCount"  />
+   <input type="text" formControlName="itemAvg_Cost" />
+  <input type="text" formControlName="itemLastUpdate" />
+  <input type="text" formControlName="volumeMeasurement" />
+
+  <input type="text" formControlName="itemName" />
+
+  <input type="text" formControlName="liquidMeasurement" />
+  <input type="text" formControlName="solidMeasurement"  />
+
+  <input type="text" formControlName="itemType"  />
+  <input type="text" formControlName="itemState"  />
+  <input type="text" formControlName="itemRemarks" />
+  <input type="text" formControlName="itemComments"  />
+   <input type="text" formControlName="itemCreatedTime" />
+   <input type="text" formControlName="vendor_Estimate_time" />
+  <input type="text" formControlName="item_Size" />
+  <input type="text" formControlName="item_Colour" />
+  
+  <input type="text" formControlName="itemlastUpdate" />
+  <button type="submit">Submit</button>
+</form>  -->
