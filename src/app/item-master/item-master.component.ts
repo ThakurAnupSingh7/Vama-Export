@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ProductDetailsService } from '../Service/product-details.service';
-import { ItemMasterService } from '../Service/item-master.service';
+import { ItemMasterService } from '..//Service/item-master.service';
 
 @Component({
   selector: 'app-item-master',
