@@ -10,11 +10,16 @@ import { SellingOrderComponent } from './selling-order/selling-order.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { MoreInfoComponent } from './more-info/more-info.component';
+import { AuthGuard } from './Service/auth.guard';
 
 
 const routes: Routes = [
    {path:'', pathMatch:'full', redirectTo:'login'},
-  {path:'item-master', component:ItemMasterComponent},
+  {
+    path:'item-master',
+   component:ItemMasterComponent,
+   canActivate: [AuthGuard]
+},
   {path:'product-simulation', component:ProductSimulationComponent},
   {path:'product-details', component:ProductDetailsComponent},
   {path:'finishing', component:FinishingComponent},

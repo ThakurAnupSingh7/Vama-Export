@@ -1,15 +1,17 @@
 
 <mat-card class="container">
 
-  <button mat-raised-button color="primary" routerLink="/"> Login</button>
-  <button mat-raised-button color="accent" routerLink="register"> Register</button>
+  <button mat-raised-button color="primary" *ngIf="!_signupSigninService.loggedIn()" routerLink="/"> Login</button>
+  <button mat-raised-button color="accent"  *ngIf="!_signupSigninService.loggedIn()" routerLink="register"> Register</button>
+  <button mat-raised-button color="accent"  *ngIf="_signupSigninService.loggedIn()"
+  (click)="_signupSigninService.logOutUser()"> LogOut</button>
   
     <ul class="list-group">
-   <li class="list-group-item" routerLink="item-master">Item Master  <i class='fas fa-clipboard-list'></i></li>
-      <li class="list-group-item" routerLink="purchaging-order">Purchasing Order <i class='fas fa-briefcase'></i></li>
-       <li class="list-group-item" routerLink="product-simulation">Product Simulation  <i class='	fas fa-tools'></i></li>
-      <li class="list-group-item" routerLink="product-details">Product Details  <i class='fas fa-chalkboard-teacher'></i></li>
-      <li class="list-group-item" routerLink="selling-order">Sells Order<i class='fas fa-dolly-flatbed'></i></li>
-      <li class="list-group-item" routerLink="costing">Costing  <i class='fas fa-boxes'></i></li>
+   <li class="list-group-item"  *ngIf="_signupSigninService.loggedIn()" routerLink="item-master">Item Master  <i class='fas fa-clipboard-list'></i></li>
+      <li class="list-group-item"  *ngIf="_signupSigninService.loggedIn()" routerLink="purchaging-order">Purchasing Order <i class='fas fa-briefcase'></i></li>
+       <li class="list-group-item"  *ngIf="_signupSigninService.loggedIn()" routerLink="product-simulation">Product Simulation  <i class='	fas fa-tools'></i></li>
+      <li class="list-group-item"  *ngIf="_signupSigninService.loggedIn()" routerLink="product-details">Product Details  <i class='fas fa-chalkboard-teacher'></i></li>
+      <li class="list-group-item"  *ngIf="_signupSigninService.loggedIn()" routerLink="selling-order">Sells Order<i class='fas fa-dolly-flatbed'></i></li>
+      <li class="list-group-item"  *ngIf="_signupSigninService.loggedIn()" routerLink="costing">Costing  <i class='fas fa-boxes'></i></li>
     </ul>
   </mat-card>

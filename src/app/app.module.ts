@@ -61,12 +61,14 @@ import { SellingOrderComponent } from './selling-order/selling-order.component';
 import { HeaderSecondComponent } from './header-second/header-second.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MoreInfoComponent } from './more-info/more-info.component';
 import { SignupSigninService } from './Service/signup-signin.service';
 import { ProductDetailsService } from './Service/product-details.service';
 import { ItemMasterService } from './Service/item-master.service';
+import { AuthGuard } from './Service/auth.guard';
+import { TokenInterceptorService } from './Service/token-interceptor.service';
 
 
 
@@ -141,7 +143,11 @@ import { ItemMasterService } from './Service/item-master.service';
     PortalModule,
     ScrollingModule,
   ],
-  providers: [SignupSigninService,ProductDetailsService, ItemMasterService],
+  providers: [SignupSigninService,ProductDetailsService, ItemMasterService,AuthGuard,{
+    provide:HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
